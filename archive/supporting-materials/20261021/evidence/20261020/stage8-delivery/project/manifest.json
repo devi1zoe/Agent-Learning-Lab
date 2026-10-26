@@ -1,0 +1,16 @@
+{
+  "entry": "08-capstone/01-research-assistant.ipynb",
+  "modules": {
+    "08-capstone/01-research-assistant.ipynb": "lesson_f50ea8ecb9a4",
+    "03-agent-harness/01-harness.ipynb": "lesson_0c014a6184bc",
+    "01-agent-loop/01-minimal-loop.ipynb": "lesson_c690f01c5159",
+    "02-tools-rag-memory/01-rag-and-memory.ipynb": "lesson_124c6739da30"
+  },
+  "source_sha256": {
+    "08-capstone/01-research-assistant.ipynb": "16e859def109044e7368a1601e48d555b569c91d07cf5f2dfe289bfde6f1b820",
+    "03-agent-harness/01-harness.ipynb": "11e99266e344f2acf4cc16d53fe46800112012be4bb03f7c984a757def8c647b",
+    "01-agent-loop/01-minimal-loop.ipynb": "67cb5fa4acebc58a289216d86140f16637ebfab8d6ad7b503ef04ba29d2b7552",
+    "02-tools-rag-memory/01-rag-and-memory.ipynb": "3ae07d4f219250474aa95df42e197a5360e8dadc41f6fd3845c27bfedd82f47c"
+  },
+  "source_of_truth": "Notebook definitions cells; generated Python is a delivery artifact"
+}

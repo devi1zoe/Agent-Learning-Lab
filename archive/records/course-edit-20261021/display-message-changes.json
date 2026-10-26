@@ -1,0 +1,18 @@
+{
+  "replacements": {
+    "跳过真实模型相关实验；先运行第 10 节离线测试。": "真实模型分支未执行；可以继续运行下方的离线程序测试。",
+    "请先运行实验 7B。": "请先开启真实模型分支并执行前面的问答代码。",
+    "预检索记录在实验 8D，不能用 8C 的空列表判断 RAG 失败。": "程序预检索记录在下方单独显示；模型未主动调用工具，不代表预检索没有执行。",
+    "公开网页与真实模型实验未执行。S6.O 尚未由本次运行验证；开启 RUN_LIVE 后再运行此格。": "本次没有访问公开网页或调用模型；准备服务并开启 RUN_LIVE 后，可以执行真实分支。"
+  },
+  "changes": [
+    {
+      "file": "06-browser-agent/02-public-page-agent.ipynb",
+      "print_text_replacements": 1
+    },
+    {
+      "file": "02-tools-rag-memory/02-research-agent.ipynb",
+      "print_text_replacements": 14
+    }
+  ]
+}

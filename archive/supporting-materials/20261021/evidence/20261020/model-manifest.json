@@ -1,0 +1,21 @@
+{
+  "generation": {
+    "name": "qwen3:0.6b-cpu",
+    "digest": "660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd",
+    "details": {
+      "family": "qwen3",
+      "parameter_size": "0.6B",
+      "quantization_level": "F32"
+    },
+    "version": "transformers-5.9.0-cpu-teaching-adapter"
+  },
+  "embedding": "sentence-transformers/all-MiniLM-L6-v2, 384 dimensions",
+  "device": "cpu",
+  "threads": 4,
+  "temperature": 0,
+  "adapter": "scripts/serve_local_models.py exposes a subset of Ollama-shaped routes; models are real Transformers inference",
+  "paths": {
+    "Qwen/Qwen3-0.6B": "/mnt/data/cache/huggingface-miniagent-course/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca",
+    "sentence-transformers/all-MiniLM-L6-v2": "/mnt/data/cache/huggingface-miniagent-course/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/1110a243fdf4706b3f48f1d95db1a4f5529b4d41"
+  }
+}

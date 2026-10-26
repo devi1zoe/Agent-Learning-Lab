@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "notebooks": 22,
+  "markdown_cells": 237,
+  "local_links": 47,
+  "embedded_text_assets": 20,
+  "embedded_asset_sources": [
+    "02-tools-rag-memory/data/docs/agent.md",
+    "02-tools-rag-memory/data/docs/rag.md",
+    "02-tools-rag-memory/data/docs/workflow.md",
+    "references/agent-learning-hub/LICENSE",
+    "references/agent-learning-hub/README.md",
+    "references/agent-learning-hub/source.json",
+    "references/agent-learning-hub/tasks.json",
+    "references/learn-claude-code/LICENSE",
+    "references/learn-claude-code/s02_tool_use/code.py",
+    "references/learn-claude-code/s03_permission/code.py",
+    "references/learn-claude-code/s08_context_compact/code.py",
+    "references/learn-claude-code/source.json",
+    "05-skills-protocols/assets/research-report/SKILL.md",
+    "05-skills-protocols/assets/research-report/assets/report-template.md",
+    "05-skills-protocols/assets/research-report/references/evidence-contract.md",
+    "05-skills-protocols/assets/research-report/scripts/check_report.py",
+    "05-skills-protocols/assets/research-report/scripts/smoke_test.py",
+    "evidence/20261020/eval.csv",
+    "evidence/20261020/metrics.json",
+    "evidence/20261020/model-manifest.json"
+  ],
+  "full_historical_records_embedded": 2,
+  "embedded_algorithm_functions_unchanged": [
+    "chat",
+    "execute",
+    "run"
+  ],
+  "archived_original_files_unchanged": 404,
+  "requested_root_directories_removed": true
+}

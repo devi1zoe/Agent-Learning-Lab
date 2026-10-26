@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "notebooks": 22,
+  "rendered_markdown_cells": 231,
+  "checked_local_links": 49,
+  "simplified_bootstraps": 17,
+  "raw_files_unchanged": 361,
+  "actual_code_excerpts": [
+    "chat",
+    "execute",
+    "run"
+  ],
+  "shared_code_import": "miniagent_course",
+  "archived_files": 4,
+  "model_task_labels_scoring_and_original_runtime_logic": "unchanged; only bootstrap replaced and generated README text simplified",
+  "new_model_inference": false
+}

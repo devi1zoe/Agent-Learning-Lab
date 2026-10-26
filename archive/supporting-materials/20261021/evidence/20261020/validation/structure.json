@@ -1,0 +1,15 @@
+{
+  "notebooks_valid": 23,
+  "definitions_changes": [
+    {
+      "notebook": "02-tools-rag-memory/03-web-research.ipynb",
+      "old_definition_cells": 8,
+      "new_definition_cells": 8,
+      "changed_definition_cells": [
+        3
+      ]
+    }
+  ],
+  "broken_links": [],
+  "scope": "current primary learning files and evidence entry points; historical archive excluded"
+}

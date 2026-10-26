@@ -1,0 +1,73 @@
+{
+  "ordinary_dialogue": {
+    "request": {
+      "model": "qwen3:0.6b-cpu",
+      "messages": [
+        {
+          "role": "user",
+          "content": "In one sentence, explain why an agent reads tool results before choosing another action."
+        }
+      ],
+      "stream": false,
+      "think": false,
+      "options": {
+        "temperature": 0,
+        "num_predict": 96,
+        "num_ctx": 8192
+      }
+    },
+    "response": {
+      "model": "qwen3:0.6b-cpu",
+      "message": {
+        "role": "assistant",
+        "content": "An agent reads tool results before choosing another action to ensure accuracy and make informed decisions."
+      },
+      "raw_generated": "An agent reads tool results before choosing another action to ensure accuracy and make informed decisions.",
+      "done": true,
+      "prompt_eval_count": 28,
+      "eval_count": 18,
+      "total_duration": 3478274077,
+      "evidence_mode": "live_local_model",
+      "backend": "Transformers CPU, no replay"
+    },
+    "latency_ms": 3526.893,
+    "input_tokens": 28,
+    "output_tokens": 18
+  },
+  "structured_json": {
+    "request": {
+      "model": "qwen3:0.6b-cpu",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Return JSON with fields stage:7, minimum_tasks:20, evidence_required:true."
+        }
+      ],
+      "stream": false,
+      "think": false,
+      "options": {
+        "temperature": 0,
+        "num_predict": 96,
+        "num_ctx": 8192
+      },
+      "format": "json"
+    },
+    "response": {
+      "model": "qwen3:0.6b-cpu",
+      "message": {
+        "role": "assistant",
+        "content": "```json\n{\n  \"stage\": 7,\n  \"minimum_tasks\": 20,\n  \"evidence_required\": true\n}\n```"
+      },
+      "raw_generated": "```json\n{\n  \"stage\": 7,\n  \"minimum_tasks\": 20,\n  \"evidence_required\": true\n}\n```",
+      "done": true,
+      "prompt_eval_count": 44,
+      "eval_count": 31,
+      "total_duration": 2940430134,
+      "evidence_mode": "live_local_model",
+      "backend": "Transformers CPU, no replay"
+    },
+    "latency_ms": 2944.309,
+    "input_tokens": 44,
+    "output_tokens": 31
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "kind": "separate supplemental public-page example; not a rerun of example.com regression",
+  "target": "https://github.com/datawhalechina/Agent-Learning-Hub",
+  "network_scope": "HTTPS GET to github.com only",
+  "changes": [
+    "PUBLIC_URL",
+    "host allowlist"
+  ],
+  "model": "qwen3:0.6b-cpu"
+}

@@ -1,0 +1,18 @@
+Looking in indexes: https://mirrors.aliyun.com/pypi/simple
+Obtaining file:///tmp/miniagent-notebook-consolidation-dg_97z6n/miniAgent
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: miniagent-course
+  Building editable for miniagent-course (pyproject.toml): started
+  Building editable for miniagent-course (pyproject.toml): finished with status 'done'
+  Created wheel for miniagent-course: filename=miniagent_course-0.1.0-0.editable-py3-none-any.whl size=2517 sha256=29a91dfb5ebb60cbc0043707ae36ba15c069c8475e267602fd5762c75b46ecc8
+  Stored in directory: /tmp/pip-ephem-wheel-cache-9g1ql28p/wheels/31/18/d9/1679433df1b4fe3027a80008512453d1e4694ae93c59a0cbd1
+Successfully built miniagent-course
+Installing collected packages: miniagent-course
+  Attempting uninstall: miniagent-course
+    Found existing installation: miniagent-course 0.1.0
+    Not uninstalling miniagent-course at /home/ubuntu/.local/lib/python3.10/site-packages, outside environment /tmp/miniagent-notebook-consolidation-dg_97z6n/environment
+    Can't uninstall 'miniagent-course'. No files were found to uninstall.
+Successfully installed miniagent-course-0.1.0

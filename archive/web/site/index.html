@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#eff5ef">
+  <meta name="description" content="从第一轮工具调用，到可交付的 Agent。miniAgent 的交互式学习路线、完整课程与本地实验。">
+  <title>miniAgent — 一步一步，学会构建 Agent</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%231e6154'/%3E%3Cpath d='M8 21V11l8 7 8-7v10' fill='none' stroke='%23f4f6ed' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="highlight.css">
+  <script defer src="vendor/marked.js"></script>
+  <script defer src="vendor/purify.js"></script>
+  <script defer src="vendor/highlight.js"></script>
+  <script defer src="vendor/highlight-powershell.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到内容</a>
+  <div id="app"><div class="loading">正在整理你的学习桌面…</div></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <dialog id="search-dialog" aria-label="搜索课程">
+    <div class="search-box"><span aria-hidden="true">⌕</span><input id="search-input" placeholder="搜索课程、概念、代码…" autocomplete="off"><button class="icon-button" data-action="close-search" aria-label="关闭搜索">×</button></div>
+    <div id="search-results"></div>
+    <footer>搜索全部课程内容 <kbd>Esc</kbd> 关闭</footer>
+  </dialog>
+  <dialog id="run-dialog" aria-labelledby="run-title">
+    <div class="dialog-head"><div><span class="eyebrow">LOCAL LAB</span><h2 id="run-title">本地实验</h2></div><button class="icon-button" data-action="close-run" aria-label="关闭实验窗口">×</button></div>
+    <p id="run-description">实验将在独立 Python 内核中执行，结果直接显示在这里。</p>
+    <div id="run-status" class="run-status"></div><pre id="run-output" tabindex="0"></pre>
+    <div id="run-actions"></div>
+  </dialog>
+  <noscript>此学习站需要 JavaScript。你的原始课程仍可从项目 README 和 Notebook 阅读。</noscript>
+</body>
+</html>

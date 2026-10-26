@@ -1,0 +1,62 @@
+{
+  "accessed_on": "2026-10-21",
+  "sources": [
+    {
+      "name": "Building effective agents",
+      "url": "https://www.anthropic.com/research/building-effective-agents"
+    },
+    {
+      "name": "ReAct",
+      "url": "https://arxiv.org/abs/2210.03629"
+    },
+    {
+      "name": "Plan-and-Solve",
+      "url": "https://arxiv.org/abs/2305.04091"
+    },
+    {
+      "name": "ReWOO",
+      "url": "https://arxiv.org/abs/2305.18323"
+    },
+    {
+      "name": "Self-Ask",
+      "url": "https://arxiv.org/abs/2210.03350"
+    },
+    {
+      "name": "Self-Refine",
+      "url": "https://arxiv.org/abs/2303.17651"
+    },
+    {
+      "name": "Reflexion",
+      "url": "https://arxiv.org/abs/2303.11366"
+    },
+    {
+      "name": "Tree of Thoughts",
+      "url": "https://arxiv.org/abs/2305.10601"
+    },
+    {
+      "name": "Graph of Thoughts",
+      "url": "https://arxiv.org/abs/2308.09687"
+    },
+    {
+      "name": "LATS",
+      "url": "https://arxiv.org/abs/2310.04406"
+    },
+    {
+      "name": "LLMCompiler",
+      "url": "https://arxiv.org/abs/2312.04511"
+    },
+    {
+      "name": "CodeAct",
+      "url": "https://arxiv.org/abs/2402.01030"
+    },
+    {
+      "name": "AutoGen",
+      "url": "https://arxiv.org/abs/2308.08155"
+    },
+    {
+      "name": "CAMEL",
+      "url": "https://arxiv.org/abs/2303.17760"
+    }
+  ],
+  "scope": "Primary-paper method descriptions and official workflow patterns. Taxonomy and illustrative use cases are course organization, not a claim of one exhaustive standard. No paper benchmark results were transferred to this repository."
+}

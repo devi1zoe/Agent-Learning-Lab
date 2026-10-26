@@ -1,0 +1,18 @@
+{
+  "source": "experiments/minimal_agent.py",
+  "sha256": "025d471a6a0b9bc57b42a2393b2e7a8bf24c7138980a5d8e6a17f2d48b0b1d67",
+  "functions": [
+    "execute",
+    "run"
+  ],
+  "excerpt_policy": "AST get_source_segment; exact source text, no logic rewrite",
+  "trace_sources": {
+    "kind": "read_saved_real_model_trace",
+    "model_inference": false,
+    "source_files": {
+      "evidence/20261020/stage1-tool-loop.json": "322778739b8504b35d3450df6f9305f523ba9457f08a87d0c84a43b85e2cd81e",
+      "evidence/20261020/stage1-evidence-gate.json": "5cdb5f72842828939a98e829dd91db76205a6c9d87cf1efd9ecfbcd258c02b32",
+      "experiments/minimal_agent.py": "025d471a6a0b9bc57b42a2393b2e7a8bf24c7138980a5d8e6a17f2d48b0b1d67"
+    }
+  }
+}

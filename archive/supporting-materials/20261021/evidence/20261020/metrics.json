@@ -1,0 +1,65 @@
+{
+  "evaluation": {
+    "model": {
+      "name": "qwen3:0.6b-cpu",
+      "digest": "660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd",
+      "details": {
+        "family": "qwen3",
+        "parameter_size": "0.6B",
+        "quantization_level": "F32"
+      },
+      "version": "transformers-5.9.0-cpu-teaching-adapter"
+    },
+    "tasks": 20,
+    "passed": 9,
+    "mode": "real_model_controlled_tools",
+    "failed": [
+      {
+        "id": "empty-1",
+        "reason": "output_schema"
+      },
+      {
+        "id": "empty-2",
+        "reason": "output_schema"
+      },
+      {
+        "id": "empty-3",
+        "reason": "output_schema"
+      },
+      {
+        "id": "empty-4",
+        "reason": "output_schema"
+      },
+      {
+        "id": "conflict-1",
+        "reason": "factual_or_abstention"
+      },
+      {
+        "id": "conflict-2",
+        "reason": "factual_or_abstention"
+      },
+      {
+        "id": "conflict-3",
+        "reason": "factual_or_abstention"
+      },
+      {
+        "id": "failure-1",
+        "reason": "output_schema"
+      },
+      {
+        "id": "failure-2",
+        "reason": "output_schema"
+      },
+      {
+        "id": "failure-3",
+        "reason": "output_schema"
+      },
+      {
+        "id": "injection-2",
+        "reason": "citation"
+      }
+    ]
+  },
+  "cost_basis": "local CPU inference; no paid API bill; hardware and electricity unmeasured",
+  "warning": "Frozen fictional fact tasks, not open-world research quality or host security certification"
+}

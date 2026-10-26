@@ -1,0 +1,14 @@
+Looking in indexes: https://mirrors.aliyun.com/pypi/simple
+Obtaining file:///tmp/miniagent-evidence-architecture-df8wxwb_/miniAgent
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: miniagent-course
+  Building editable for miniagent-course (pyproject.toml): started
+  Building editable for miniagent-course (pyproject.toml): finished with status 'done'
+  Created wheel for miniagent-course: filename=miniagent_course-0.1.0-0.editable-py3-none-any.whl size=2543 sha256=0f02023d3d0eedc62825d64dbe607a4f50c9248f7073f1dc3afc47ed6466b9ff
+  Stored in directory: /tmp/pip-ephem-wheel-cache-q6w23pk6/wheels/f4/f0/f2/cdac11343ac7a204a0c26f2156072feedb2b47e07411eabf3c
+Successfully built miniagent-course
+Installing collected packages: miniagent-course
+Successfully installed miniagent-course-0.1.0

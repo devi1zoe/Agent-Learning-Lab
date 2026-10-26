@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "miniagent-course"
+version = "0.1.0"
+description = "Shared imports and executable examples for the MiniAgent Notebook course"
+requires-python = ">=3.9"
+
+[tool.setuptools]
+py-modules = ["miniagent_course"]
+packages = []

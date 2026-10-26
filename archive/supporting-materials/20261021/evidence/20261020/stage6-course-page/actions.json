@@ -1,0 +1,13 @@
+[
+  {
+    "event": "open",
+    "url": "https://github.com/datawhalechina/Agent-Learning-Hub"
+  },
+  {
+    "event": "read_page",
+    "observation_id": "L1"
+  },
+  {
+    "event": "completed"
+  }
+]

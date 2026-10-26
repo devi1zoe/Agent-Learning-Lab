@@ -1,0 +1,4 @@
+# Optional CPU real-model laboratory; not required to read saved teaching evidence.
+torch>=2.5,<3
+transformers>=4.51,<6
+huggingface-hub>=0.30,<2

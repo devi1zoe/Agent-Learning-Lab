@@ -1,0 +1,23 @@
+[
+  {
+    "name": "marked",
+    "version": "18.1.1",
+    "source": "https://registry.npmjs.org/marked/-/marked-18.1.1.tgz",
+    "file": "marked.js"
+  },
+  {
+    "name": "dompurify",
+    "version": "3.4.17",
+    "source": "https://registry.npmjs.org/dompurify/-/dompurify-3.4.17.tgz",
+    "file": "purify.js"
+  },
+  {
+    "name": "@highlightjs/cdn-assets",
+    "version": "11.12.0",
+    "source": "https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.12.0/",
+    "files": [
+      "highlight.js",
+      "highlight-powershell.js"
+    ]
+  }
+]

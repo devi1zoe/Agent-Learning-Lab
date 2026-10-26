@@ -1,0 +1,174 @@
+{
+  "model": {
+    "name": "qwen3:0.6b-cpu",
+    "digest": "660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd",
+    "details": {
+      "family": "qwen3",
+      "parameter_size": "0.6B",
+      "quantization_level": "F32"
+    },
+    "version": "transformers-5.9.0-cpu-teaching-adapter"
+  },
+  "coordinated": {
+    "status": "completed",
+    "draft": "蓝舟项目位于苏州[L1]，有12位成员[L1]。",
+    "trace": [
+      {
+        "role": "research",
+        "evidence": [
+          {
+            "id": "L1",
+            "text": "蓝舟项目位于苏州，有12位成员。"
+          }
+        ]
+      },
+      {
+        "role": "writer",
+        "revision": 0,
+        "request": {
+          "request": {
+            "model": "qwen3:0.6b-cpu",
+            "messages": [
+              {
+                "role": "system",
+                "content": "只根据证据写一行回答，每个事实末尾放[L编号]，不改变原题。"
+              },
+              {
+                "role": "user",
+                "content": "{'topic': '蓝舟项目在哪座城市，有多少位成员？', 'evidence': [{'id': 'L1', 'text': '蓝舟项目位于苏州，有12位成员。'}], 'review_issues': []}"
+              }
+            ],
+            "stream": false,
+            "think": false,
+            "options": {
+              "temperature": 0,
+              "num_predict": 256,
+              "num_ctx": 8192
+            }
+          },
+          "response": {
+            "model": "qwen3:0.6b-cpu",
+            "message": {
+              "role": "assistant",
+              "content": "蓝舟项目位于苏州[L1]，有12位成员[L1]。"
+            },
+            "raw_generated": "蓝舟项目位于苏州[L1]，有12位成员[L1]。",
+            "done": true,
+            "prompt_eval_count": 89,
+            "eval_count": 19,
+            "total_duration": 1811448425,
+            "evidence_mode": "live_local_model",
+            "backend": "Transformers CPU, no replay"
+          },
+          "latency_ms": 1815.485,
+          "input_tokens": 89,
+          "output_tokens": 19
+        }
+      },
+      {
+        "role": "reviewer",
+        "revision": 0,
+        "request": {
+          "request": {
+            "model": "qwen3:0.6b-cpu",
+            "messages": [
+              {
+                "role": "system",
+                "content": "检查稿件是否回答原题，事实有证据支持，引用正确。只返回JSON {\"accepted\":true/false,\"issues\":[],\"task_id\":\"blueboat-facts\"}。task_id必须原样保留。不得提出偏离原题的修改。"
+              },
+              {
+                "role": "user",
+                "content": "{'topic': '蓝舟项目在哪座城市，有多少位成员？', 'evidence': [{'id': 'L1', 'text': '蓝舟项目位于苏州，有12位成员。'}], 'draft': '蓝舟项目位于苏州[L1]，有12位成员[L1]。'}"
+              }
+            ],
+            "stream": false,
+            "think": false,
+            "options": {
+              "temperature": 0,
+              "num_predict": 256,
+              "num_ctx": 8192
+            },
+            "format": "json"
+          },
+          "response": {
+            "model": "qwen3:0.6b-cpu",
+            "message": {
+              "role": "assistant",
+              "content": "{\"accepted\": true, \"issues\": [], \"task_id\": \"blueboat-facts\"}"
+            },
+            "raw_generated": "{\"accepted\": true, \"issues\": [], \"task_id\": \"blueboat-facts\"}",
+            "done": true,
+            "prompt_eval_count": 150,
+            "eval_count": 20,
+            "total_duration": 1909305132,
+            "evidence_mode": "live_local_model",
+            "backend": "Transformers CPU, no replay"
+          },
+          "latency_ms": 1913.59,
+          "input_tokens": 150,
+          "output_tokens": 20
+        }
+      },
+      {
+        "role": "review",
+        "revision": 0,
+        "result": {
+          "accepted": true,
+          "issues": [],
+          "task_id": "blueboat-facts"
+        }
+      }
+    ],
+    "revision": 0,
+    "evidence_chars": 16
+  },
+  "single_writer": {
+    "request": {
+      "model": "qwen3:0.6b-cpu",
+      "messages": [
+        {
+          "role": "system",
+          "content": "只依据给定证据回答，附[L1]引用。"
+        },
+        {
+          "role": "user",
+          "content": "蓝舟项目在哪座城市，有多少位成员？[{'id': 'L1', 'text': '蓝舟项目位于苏州，有12位成员。'}]"
+        }
+      ],
+      "stream": false,
+      "think": false,
+      "options": {
+        "temperature": 0,
+        "num_predict": 256,
+        "num_ctx": 8192
+      }
+    },
+    "response": {
+      "model": "qwen3:0.6b-cpu",
+      "message": {
+        "role": "assistant",
+        "content": "蓝舟项目位于苏州，有12位成员。[L1]"
+      },
+      "raw_generated": "蓝舟项目位于苏州，有12位成员。[L1]",
+      "done": true,
+      "prompt_eval_count": 67,
+      "eval_count": 17,
+      "total_duration": 1517585679,
+      "evidence_mode": "live_local_model",
+      "backend": "Transformers CPU, no replay"
+    },
+    "latency_ms": 1520.605,
+    "input_tokens": 67,
+    "output_tokens": 17
+  },
+  "stress": {
+    "unending_review": "revision_limit",
+    "task_drift": "task_drift",
+    "invalid_schema": "invalid_review",
+    "context_bound": 300
+  },
+  "comparison": {
+    "coordinated_model_calls": 2,
+    "single_model_calls": 1
+  }
+}

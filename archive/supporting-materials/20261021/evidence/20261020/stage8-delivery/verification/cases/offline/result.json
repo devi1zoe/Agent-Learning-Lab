@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "answer": "# Agent\nAgent 使用语言模型决定是否调用工具，并根据工具反馈继续行动。\n\n\n## 补充观察\n\nAgent 根据环境反馈动态选择下一步行动。模型请求工具，程序执行工具并回传结果，模型再决定下一步。\n [L1]",
+  "mode": "offline_extractive_baseline",
+  "tool_calls": 1,
+  "tokens": 0,
+  "cost_usd": null,
+  "latency_ms": 1.171,
+  "trace": [
+    {
+      "event": "retrieve",
+      "query": "Agent 如何依据反馈行动？",
+      "hits": [
+        {
+          "id": "L1",
+          "source": "agent.md",
+          "start": 0,
+          "end": 104,
+          "text": "# Agent\nAgent 使用语言模型决定是否调用工具，并根据工具反馈继续行动。\n\n\n## 补充观察\n\nAgent 根据环境反馈动态选择下一步行动。模型请求工具，程序执行工具并回传结果，模型再决定下一步。\n",
+          "score": 0.375
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "L1",
+      "source": "agent.md",
+      "start": 0,
+      "end": 104,
+      "text": "# Agent\nAgent 使用语言模型决定是否调用工具，并根据工具反馈继续行动。\n\n\n## 补充观察\n\nAgent 根据环境反馈动态选择下一步行动。模型请求工具，程序执行工具并回传结果，模型再决定下一步。\n",
+      "score": 0.375
+    }
+  ],
+  "citation_errors": []
+}

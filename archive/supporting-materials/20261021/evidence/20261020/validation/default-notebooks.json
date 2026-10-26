@@ -1,0 +1,7 @@
+{
+  "notebooks": 23,
+  "passed": 23,
+  "runner_exit_code": 0,
+  "summary": "/mnt/data/projectnew/miniagent/miniAgent/outputs/verification/linux-20261020T064245Z/summary.json",
+  "scope": "default offline control-flow regressions, not live task success"
+}

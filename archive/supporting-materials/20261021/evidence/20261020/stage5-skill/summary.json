@@ -1,0 +1,11 @@
+{
+  "without_skill": {
+    "passed": 0,
+    "tasks": 6
+  },
+  "with_skill": {
+    "passed": 0,
+    "tasks": 6
+  },
+  "interpretation": "六题成对冒烟实验，每题每组一次生成；包含Skill输入成本，不作统计泛化。"
+}

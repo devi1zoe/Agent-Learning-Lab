@@ -1,0 +1,20 @@
+{
+  "status": "no_evidence",
+  "answer": "没有检索到相关证据。",
+  "mode": "offline_extractive_baseline",
+  "tool_calls": 1,
+  "tokens": 0,
+  "cost_usd": null,
+  "latency_ms": 1.178,
+  "trace": [
+    {
+      "event": "retrieve",
+      "query": "ZXQVVUNMATCHED",
+      "hits": []
+    }
+  ],
+  "evidence": [],
+  "citation_errors": [
+    "no_evidence"
+  ]
+}

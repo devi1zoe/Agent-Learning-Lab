@@ -1,0 +1,6 @@
+{
+  "executed": true,
+  "seconds": 9.439139984548092,
+  "backend": "Transformers CPU adapter, not Ollama",
+  "evidence_mode": "live_local_model"
+}

@@ -1,0 +1,30 @@
+{
+  "status": "model_error",
+  "answer": "",
+  "tool_calls": 0,
+  "latency_ms": 2590.484,
+  "tokens": 0,
+  "cost_usd": null,
+  "trace": [
+    {
+      "step": 0,
+      "event": "model_error",
+      "error": "HTTPError"
+    }
+  ],
+  "mode": "live",
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "model_requests": [],
+  "budget": {
+    "max_model_rounds": 6,
+    "max_output_per_request": 512,
+    "max_output_including_one_retry_per_round": 6144,
+    "total_input_and_output_tokens": "soft limit checked between requests",
+    "cost_usd": "not applicable to local Ollama API billing"
+  },
+  "evidence": [],
+  "citation_errors": [
+    "no_evidence"
+  ]
+}

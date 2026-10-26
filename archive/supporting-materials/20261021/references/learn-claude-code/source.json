@@ -1,0 +1,28 @@
+{
+  "repository": "https://github.com/shareAI-lab/learn-claude-code",
+  "commit": "ce8f9f186058939da54c9d6fead78dfb5d0fd6c3",
+  "retrieved_at": "2026-10-20T06:33:41.029935+00:00",
+  "purpose": "Pinned source reading and original-loop execution; no upstream main-branch claim",
+  "files": {
+    "s02_tool_use/code.py": {
+      "sha256": "fa6fdaa4e75ae4304507a96cb22adf98854f115509bec2ecc400f31c202ff19e",
+      "bytes": 7599,
+      "url": "https://raw.githubusercontent.com/shareAI-lab/learn-claude-code/ce8f9f186058939da54c9d6fead78dfb5d0fd6c3/s02_tool_use/code.py"
+    },
+    "s03_permission/code.py": {
+      "sha256": "6854e6b2ad0b5343a8abc0213e80c010cd7c39dd501c396797e1aecb6c6c1a80",
+      "bytes": 9788,
+      "url": "https://raw.githubusercontent.com/shareAI-lab/learn-claude-code/ce8f9f186058939da54c9d6fead78dfb5d0fd6c3/s03_permission/code.py"
+    },
+    "s08_context_compact/code.py": {
+      "sha256": "4eeedf2e3edeb526b88830d5ffc4c6cf928fe5a8178885a389f91a2eb88b1e15",
+      "bytes": 24096,
+      "url": "https://raw.githubusercontent.com/shareAI-lab/learn-claude-code/ce8f9f186058939da54c9d6fead78dfb5d0fd6c3/s08_context_compact/code.py"
+    },
+    "LICENSE": {
+      "sha256": "204ff5ee216c8f895268a23b66d959f82aa4d868e871e0690fbf2844eff8a26b",
+      "bytes": 1068,
+      "url": "https://raw.githubusercontent.com/shareAI-lab/learn-claude-code/ce8f9f186058939da54c9d6fead78dfb5d0fd6c3/LICENSE"
+    }
+  }
+}

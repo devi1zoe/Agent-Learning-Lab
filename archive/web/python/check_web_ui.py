@@ -1,0 +1,141 @@
+"""Browser QA in a fresh, isolated Playwright browser; never uses a personal profile."""
+import argparse
+import json
+from pathlib import Path
+
+from playwright.sync_api import sync_playwright, expect
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def run(url, live=False):
+    output = ROOT / ".learning_output/web-qa"
+    output.mkdir(parents=True, exist_ok=True)
+    report = {"checks": []}
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch(headless=True)
+        context = browser.new_context(viewport={"width": 1440, "height": 1100})
+        page = context.new_page()
+        errors = []
+        page.on("pageerror", lambda error: errors.append(str(error)))
+        page.goto(url, wait_until="networkidle")
+        expect(page.get_by_role("heading", name="你的学习路线")).to_be_visible()
+        expect(page.locator(".stage-card")).to_have_count(9)
+        page.screenshot(path=str(output / "desktop-home.png"), full_page=True)
+        report["checks"].append("9-stage roadmap visible")
+        page.get_by_role("button", name="搜索课程").click()
+        page.locator("#search-input").fill("dispatcher")
+        expect(page.locator(".search-result").first).to_be_visible()
+        page.get_by_role("button", name="关闭搜索").click()
+        report["checks"].append("full text search")
+        page.get_by_role("link", name="从第 0 课开始").click()
+        expect(page.locator("#course-problem h2")).to_have_text("1. 分析题目")
+        expect(page.locator(".lesson-tabs")).to_have_count(0)
+        assert page.locator("#course-problem").evaluate("e=>e.offsetTop") < page.locator("#course-thinking").evaluate("e=>e.offsetTop") < page.locator("#course-walkthrough").evaluate("e=>e.offsetTop")
+        expect(page.locator("#course-unit-0")).to_contain_text("Chatbot")
+        expect(page.locator("#course-unit-1")).to_contain_text("Model 与 Runtime")
+        page.screenshot(path=str(output / "desktop-reader.png"))
+        report["checks"].append("continuous task analysis -> implementation plan -> inline Markdown and Notebook, without tabs")
+        code = page.locator(".code-cell pre > code.language-python.hljs").first
+        expect(code.locator(".hljs-keyword").first).to_be_visible()
+        expect(code.locator(".hljs-string").first).to_be_visible()
+        original = code.text_content()
+        context.grant_permissions(["clipboard-read", "clipboard-write"])
+        page.locator(".copy-button").first.click()
+        expect(page.locator("#toast")).to_contain_text("代码已复制")
+        copied = page.evaluate("navigator.clipboard.readText()")
+        assert copied.replace("\r\n", "\n") == original.replace("\r\n", "\n")
+        report["checks"].append("Python syntax highlighting preserves original text and copied code")
+        page.locator("#lesson-notes").fill("网页学习记录：观察与执行分别由谁负责？")
+        page.reload(wait_until="networkidle")
+        expect(page.locator("#lesson-notes")).to_have_value("网页学习记录：观察与执行分别由谁负责？")
+        report["checks"].append("personal notes persist across reload")
+        expect(page.locator("input[data-task]")).to_have_count(5)
+        page.locator("input[data-task]").first.check()
+        page.reload(wait_until="networkidle")
+        expect(page.locator("input[data-task]").first).to_be_checked()
+        report["checks"].append("task progress persists")
+        page.get_by_role("button", name="标记本阶段已学完", exact=True).click()
+        expect(page.get_by_role("button", name="✓ 已学完本阶段", exact=True)).to_be_visible()
+        report["checks"].append("inline tasks, notes and stage completion need no content switches")
+        page.get_by_role("button", name="运行本章实验").click()
+        page.get_by_role("button", name="关闭实验窗口").click()
+        page.get_by_role("button", name="运行本章实验").click()
+        expect(page.locator("#run-status")).to_have_text("✓ 实验执行通过", timeout=90000)
+        expect(page.locator("#run-output")).to_contain_text("实际单元格输出")
+        page.screenshot(path=str(output / "local-experiment.png"), full_page=True)
+        page.get_by_role("button", name="关闭实验窗口").click()
+        report["checks"].append("offline Notebook execution resumes after closing the dialog and shows actual outputs")
+        for stage in range(9):
+            page.goto(url + f"/#stage/{stage}/lesson", wait_until="networkidle")
+            expect(page.locator(".course-chapter > h2")).to_have_text([
+                "1. 分析题目", "2. 如何实现", "3. 按步骤实现", "4. 运行与验证", "5. 验收与总结"])
+            expect(page.locator("input[data-task]")).to_have_count([5,6,5,5,5,8,5,6,5][stage])
+            assert not page.evaluate("document.documentElement.scrollWidth > innerWidth")
+        report["checks"].append("all 9 stages use the reading sequence and retain all 50 task checkboxes")
+        page.goto(url + "/#stage/1/lesson", wait_until="networkidle")
+        unit = page.locator("#course-unit-1")
+        assert unit.inner_text().index("dispatcher（工具分发器）") < unit.inner_text().index("def minimal_loop")
+        page.locator('#toc-links [data-scroll="course-unit-1"]').click()
+        page.wait_for_function("Math.abs(document.getElementById('course-unit-1').getBoundingClientRect().top-24)<3")
+        assert page.url.endswith("#stage/1/lesson")
+        expect(page.locator(".course-unit")).to_have_count(4)
+        page.screenshot(path=str(output / "desktop-implementation.png"))
+        report["checks"].append("dispatcher is explained before the loop; contents links scroll without switching content")
+        page.goto(url + "/#stage/2/lesson", wait_until="networkidle")
+        merged_code = page.locator('.code-cell:has(button[data-source="step2/step2_stage2_diagnostics_fixed.ipynb"])').first
+        original = merged_code.locator("pre > code").first.text_content()
+        merged_code.locator("button[data-copy]").click()
+        expect(page.locator("#toast")).to_contain_text("代码已复制")
+        assert page.evaluate("navigator.clipboard.readText()").replace("\r\n", "\n") == original.replace("\r\n", "\n")
+        report["checks"].append("complete Stage 2 implementation is inline and copies its own source cells")
+        page.goto(url + "/#stage/1/tasks", wait_until="networkidle")
+        expect(page.locator("#course-problem")).to_be_attached()
+        expect(page.locator("#course-tasks")).to_be_in_viewport()
+        report["checks"].append("old task links open the same continuous chapter at its assessment")
+        if live:
+            page.goto(url + "/#stage/1/lesson", wait_until="networkidle")
+            page.get_by_role("button", name="真实实践", exact=True).click()
+            expect(page.locator("#run-status")).to_have_text("✓ 真实实践运行结束（成绩见输出）", timeout=120000)
+            expect(page.locator("#run-output")).to_contain_text("408")
+            page.get_by_role("button", name="关闭实验窗口").click()
+            report["checks"].append("real Ollama practice started from the reader button")
+        page.goto(url + "/#playground", wait_until="networkidle")
+        before = page.locator("#flow-code").inner_text()
+        page.get_by_role("button", name="下一步 →").click()
+        assert page.locator("#flow-code").inner_text() != before
+        report["checks"].append("interactive loop diagram")
+        page.goto(url + "/#extensions", wait_until="networkidle")
+        expect(page.locator(".extension-card")).to_have_count(4)
+        report["checks"].append("optional extensions separated")
+        page.goto(url + "/#read/README.md", wait_until="networkidle")
+        expect(page.locator("pre > code.language-powershell.hljs").first).to_be_visible()
+        assert page.locator("pre > code.language-powershell .hljs-string").count() > 0
+        report["checks"].append("Markdown fenced PowerShell blocks use their declared language")
+        mobile = browser.new_context(viewport={"width": 390, "height": 844}, is_mobile=True, device_scale_factor=1)
+        phone = mobile.new_page()
+        phone.goto(url, wait_until="networkidle")
+        assert phone.evaluate("document.documentElement.scrollWidth <= innerWidth")
+        phone.screenshot(path=str(output / "mobile-home.png"), full_page=True)
+        phone.get_by_role("button", name="展开导航").click()
+        expect(phone.locator(".sidebar")).to_have_class("sidebar open")
+        phone.goto(url + "/#stage/1/lesson", wait_until="networkidle")
+        expect(phone.locator("#course-problem")).to_be_visible()
+        assert phone.evaluate("document.documentElement.scrollWidth <= innerWidth")
+        phone.screenshot(path=str(output / "mobile-reader.png"))
+        phone.goto(url + "/#stage/2/lesson", wait_until="networkidle")
+        assert phone.evaluate("document.documentElement.scrollWidth <= innerWidth")
+        report["checks"].append("mobile roadmap, menu and long merged lessons fit the viewport")
+        report["browser_errors"] = errors
+        assert not errors, errors
+        browser.close()
+    (output / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(json.dumps(report, ensure_ascii=False, indent=2))
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--url", default="http://127.0.0.1:8765")
+    parser.add_argument("--live", action="store_true", help="Also test the real Stage 1 Ollama practice button")
+    args = parser.parse_args()
+    run(args.url.rstrip("/"), args.live)

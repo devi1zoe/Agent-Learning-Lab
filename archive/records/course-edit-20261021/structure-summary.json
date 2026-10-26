@@ -1,0 +1,17 @@
+{
+  "notebooks": 22,
+  "rewritten_notebooks": 21,
+  "stage0_unchanged": true,
+  "program_logic_and_scoring_unchanged": true,
+  "allowed_code_changes": "15 display-message replacements in two notebooks; executable structure otherwise unchanged",
+  "raw_experiments_reference_sources_and_existing_outputs_unchanged": true,
+  "documentation_only_historical_redirects": [
+    "evidence/20261020/stage0-scenario.md",
+    "evidence/20261020/README.md"
+  ],
+  "archived_documents": 11,
+  "checked_local_links": 89,
+  "problems": [],
+  "passed": true,
+  "snapshot": "archive/revisions/before-course-edit-20261021T105952Z.zip"
+}

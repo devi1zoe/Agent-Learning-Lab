@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-21",
+  "files": [
+    {
+      "original": "DESIGN-TOUR.md",
+      "archived": "archive/course-notes/20261021/DESIGN-TOUR.md",
+      "sha256": "541095343e9a2ef89f1ee3cfe1b067ad36c5603aa34f831115fc7b3f17727891",
+      "current_lesson": "README.md",
+      "reason": "课程总览已并入首页，具体案例在各章正文"
+    },
+    {
+      "original": "COURSE-ALIGNMENT.md",
+      "archived": "archive/course-notes/20261021/COURSE-ALIGNMENT.md",
+      "sha256": "536f4cfa8d77dff73e0af3607ad13dc2503832e1cb1c782437b588df782fdbea",
+      "current_lesson": "README.md",
+      "reason": "逐项对齐作为审计记录保留，学习入口改为阶段表"
+    },
+    {
+      "original": "00-foundations/02-concepts.md",
+      "archived": "archive/course-notes/20261021/00-foundations/02-concepts.md",
+      "sha256": "753cab694afa4ca4c45b67bfb06084fc85019a6641f3423098d9887cc3f14f50",
+      "current_lesson": "00-foundations/01-what-is-an-agent.ipynb",
+      "reason": "概念解释已在课程正文说明"
+    },
+    {
+      "original": "00-foundations/03-model-and-runtime.md",
+      "archived": "archive/course-notes/20261021/00-foundations/03-model-and-runtime.md",
+      "sha256": "1031867736b839a8874d55dac0d039ab62ba55db93e7c1ad1e1c5cfca6bcfe2c",
+      "current_lesson": "03-agent-harness/01-harness.ipynb",
+      "reason": "模型与主程序职责已在 Stage 1、Stage 3 说明"
+    },
+    {
+      "original": "00-foundations/04-reading-anthropic.md",
+      "archived": "archive/course-notes/20261021/00-foundations/04-reading-anthropic.md",
+      "sha256": "4b69ce6241eb0605a2eaf0ec1e6b638c4e081676fcb2ec20a2f857dd7e6e8209",
+      "current_lesson": "00-foundations/01-what-is-an-agent.ipynb",
+      "reason": "中文导读已直接写进认可的 Stage 0"
+    },
+    {
+      "original": "00-foundations/05-reading-openai.md",
+      "archived": "archive/course-notes/20261021/00-foundations/05-reading-openai.md",
+      "sha256": "3e2a6fb9b99bc15ad492e6c6503260796aeeee8389123efd46fa1eba698c148f",
+      "current_lesson": "00-foundations/01-what-is-an-agent.ipynb",
+      "reason": "中文导读已直接写进认可的 Stage 0"
+    },
+    {
+      "original": "00-foundations/06-glossary.md",
+      "archived": "archive/course-notes/20261021/00-foundations/06-glossary.md",
+      "sha256": "a8472e07f6cf5b28808b35e5c068e3b2ccfc4be55156ba346ae910ea382c326b",
+      "current_lesson": "00-foundations/01-what-is-an-agent.ipynb",
+      "reason": "术语改为在各章首次使用时解释"
+    },
+    {
+      "original": "03-agent-harness/05-architecture-notes.md",
+      "archived": "archive/course-notes/20261021/03-agent-harness/05-architecture-notes.md",
+      "sha256": "b94763300000f4e321bf4efb8c444da8e47b912ae0ad47534e4179c3ddd72063",
+      "current_lesson": "03-agent-harness/03-extension-planning-reflection.ipynb",
+      "reason": "设计取舍已并入 Stage 3 主课和两个拓展课"
+    },
+    {
+      "original": "03-agent-harness/06-source-walkthrough.md",
+      "archived": "archive/course-notes/20261021/03-agent-harness/06-source-walkthrough.md",
+      "sha256": "aaad01da4b5147bc881a14c0864ba9dc0997d78ccfaa3c8d9f4b8ca98d9603a1",
+      "current_lesson": "03-agent-harness/01-harness.ipynb",
+      "reason": "源码位置和实际能力已并入主课及实验"
+    },
+    {
+      "original": "05-skills-protocols/03-hosts-and-protocols.md",
+      "archived": "archive/course-notes/20261021/05-skills-protocols/03-hosts-and-protocols.md",
+      "sha256": "d9753e273db7e1626c6991d8e6dc314956aeb6040f9212b14bd60e5b5ae1fc59",
+      "current_lesson": "05-skills-protocols/01-skills-and-protocols.ipynb",
+      "reason": "宿主、加载、权限和协议区别已并入主课"
+    },
+    {
+      "original": "08-capstone/DELIVERY.md",
+      "archived": "archive/course-notes/20261021/08-capstone/DELIVERY.md",
+      "sha256": "e84daf317b27df7074a7cdba37ef9fe05789ce04c79f031348888f1970217729",
+      "current_lesson": "08-capstone/01-research-assistant.ipynb",
+      "reason": "运行命令、状态和限制已并入 Stage 8 两页"
+    }
+  ],
+  "note": "Archived source documents retained byte-for-byte. Relative paths inside them describe the old structure."
+}

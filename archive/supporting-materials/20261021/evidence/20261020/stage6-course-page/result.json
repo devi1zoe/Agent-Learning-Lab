@@ -1,0 +1,82 @@
+{
+  "status": "completed",
+  "mode": "live_public",
+  "model": {
+    "name": "qwen3:0.6b-cpu",
+    "digest": "660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd",
+    "details": {
+      "family": "qwen3",
+      "parameter_size": "0.6B",
+      "quantization_level": "F32"
+    },
+    "version": "transformers-5.9.0-cpu-teaching-adapter"
+  },
+  "result": {
+    "status": "completed",
+    "answer": "{\"summary\": \"The GitHub page provides a curated learning roadmap for AI agents, focusing on practical applications and real-world examples.\", \"source_id\": \"L1\", \"quote\": \"A curated AI Agent learning roadmap for people who want to build useful, reliable agents instead of collecting random links.\"}",
+    "tool_calls": 1,
+    "latency_ms": 41723.03,
+    "tokens": 2804,
+    "cost_usd": null,
+    "trace": [
+      {
+        "step": 0,
+        "event": "model",
+        "message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "function": {
+                "name": "read_page",
+                "arguments": {
+                  "url": "https://github.com/datawhalechina/Agent-Learning-Hub"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "step": 0,
+        "event": "tool",
+        "name": "read_page",
+        "arguments": {
+          "url": "https://github.com/datawhalechina/Agent-Learning-Hub"
+        },
+        "result": {
+          "ok": true,
+          "data": {
+            "id": "L1",
+            "url": "https://github.com/datawhalechina/Agent-Learning-Hub",
+            "title": "GitHub - datawhalechina/Agent-Learning-Hub: AI Agent 学习路线与资料库收集 · GitHub",
+            "text": "Skip to content\nNavigation Menu\nSign in\nAppearance settings\nPlatform\nAI CODE CREATION\nGitHub CopilotWrite better code with AI\nGitHub Copilot appDirect agents from issue to merge\nMCP RegistryIntegrate external tools\nDEVELOPER WORKFLOWS\nActionsAutomate any workflow\nCodespacesInstant dev environments\nIssuesPlan and track work\nCode ReviewManage code changes\nCode QualityEnforce quality at merge\nAPPLICATION SECURITY\nGitHub Advanced SecurityFind and fix vulnerabilities\nCode securitySecure your code as you build\nSecret protectionStop leaks before they start\nEXPLORE\nWhy GitHub\nDocumentation\nBlog\nChangelog\nMarketplace\nView all features\nSolutions\nBY COMPANY SIZE\nEnterprises\nSmall and medium teams\nStartups\nNonprofits\nBY USE CASE\nApp Modernization\nDevSecOps\nDevOps\nCI/CD\nView all use cases\nBY INDUSTRY\nHealthcare\nFinancial services\nManufacturing\nGovernment\nView all industries\nView all solutions\nResources\nEXPLORE BY TOPIC\nAI\nSoftware Development\nDevOps\nSecurity\nView all topics\nEXPLORE BY TYPE\nCustomer stories\nEvents & webinars\nEbooks & reports\nBusiness insights\nGitHub Skills\nSUPPORT & SERVICES\nDocumentation\nCustomer support\nCommunity forum\nTrust center\nPartners\nView all resources\nOpen Source\nCOMMUNITY\nGitHub SponsorsFund open source developers\nPROGRAMS\nSecurity Lab\nMaintainer Community\nGitHub Stars\nArchive Program\nREPOSITORIES\nTopics\nTrending\nCollections\nEnterprise\nENTERPRISE SOLUTIONS\nEnterprise platformAI-powered developer platform\nAVAILABLE ADD-ONS\nGitHub Advanced SecurityEnterprise-grade security features\nCopilot for BusinessEnterprise-grade AI features\nPremium SupportEnterprise-grade 24/7 support\nPricing\nSearch/\nSign in\nSign up\nAppearance settings\ndatawhalechina\nAgent-Learning-Hub\nRepository navigation\nCode\nIssues\nPull requests8 (8)\nActions\nProjects\nSecurity and quality\nInsights\nMore items\nAgent-Learning-Hub\nPublic\nNotificationsYou must be signed in to change notification settings\nFork887 (887)\nStar8.9k (8.9k)You must be signed in to star a repository\nAbout\n\nAI Agent 学习路线与资料库收集\n\ndatawhalechina.github.io/Agent-Learning-Hub/\nResources\nReadme\nMIT license\nContributing\nContributing\nActivity\nCustom properties\nStars\n8.9k stars\nWatchers\n16 watching\nForks\n887 forks\nReport repository\nmain\nBranchesTags\nGo to file\nCode\nOpen more actions menu\nLatest commit\n \nHistory\n25 Commits\n25 Commits\nFolders and files\nName\tName\t\nLast commit message\n\t\nLast commit date\n\n\n.gitignore\n\t\n.gitignore\n\t\n \n\t\n \n\n\nCONTRIBUTING.md\n\t\nCONTRIBUTING.md\n\t\n \n\t\n \n\n\nLICENSE\n\t\nLICENSE\n\t\n \n\t\n \n\n\nREADME.md\n\t\nREADME.md\n\t\n \n\t\n \n\n\nindex.html\n\t\nindex.html\n\t\n \n\t\n \n\n\nView all files\nRepository files navigation\nREADME\nContributing\nMIT license\nMore items\nAgent Learning Hub\n\nA curated AI Agent learning roadmap for people who want to build useful, reliable agents instead of collecting random links.\n\n这个仓库只维护一个核心展示面：README。目标是把社区里优秀分享、官方博客、论文、开源项目和真实工程经验，整理成一份可以照着执行的 AI Agent 学习 todo list。\n\nMaintainer\n\nCurated by 陈思州 (Datawhale 成员) \n\nHow To Use\n如果你是新手：按「Learning Todo List」从上到下做，每完成一项就打勾。\n如果你已经会 LLM 应用：从 Stage 2 或 Stage 3 开始，重点补 Agent loop、工具调用、评测和工程化。\n如果你想做项目：直接看「Project Ladder」，每一档做一个可运行作品。\n如果你只想找资料：看「Curated Resources」，优先读官方文档和经典论文。\nWhat To Learn Now\n\nAgent 领域变化很快。当前更值得投入的不是老式“角色扮演多 agent 框架”，而是这些更贴近真实生产力的方向：\n\nPriority\tLearn\tWhy\n1\tClaude Code / Codex-style coding agents\t真实代码库、shell、文件编辑、测试、权限、上下文压缩，是最好的 agent 工程样本。\n2\tAgent harness engineering\tagent 的能力很大一部分来自 harness：工具协议、权限、状态、反馈、回放、CI、评测。\n3\tOpenClaw / Hermes-style personal agents\t长运行、本地优先、跨应用、记忆、skills、消息入口，更像“个人操作系统”。\n4\tSkills / MCP / A2A / ACP\tskills 负责能力复用，MCP 连接工具，A2A 连接 agent，ACP 连接宿主应用。\n5\tEvaluation and safety\t没有 eval、trace、权限边界的 agent 只能算 demo。\n\n不建议把精力重押在已经泛化成模板的老式 crew/role-play 框架上。它们可以了解，但不应成为主线。\n\nLearning Todo List\nStage 0: Understand What An Agent Is\n 区分 chatbot、workflow、agent、multi-agent。\n 理解 agent 的基本循环：observe -> think -> act -> observe。\n 明白什么时候不该用 agent：任务可预测、流程稳定、普通脚本能解决时，agent 反而增加不确定性。\n 读完 Anthropic: Building effective agents。\n 读完 OpenAI: A practical guide to building agents。\n\n产出：写一页短笔记，回答「我的场景为什么需要 agent，而不是普通 workflow？」\n\nStage 1: Build A Minimal Agent Loop\n 会用一个 LLM API 完成普通对话。\n 会让模型输出结构化 JSON。\n 会定义一个工具函数，例如 search、calculator、read_file。\n 会解析模型的 tool call / function call。\n 会执行工具，并把工具结果喂回模型。\n 会给 agent loop 加最大步数、超时和错误处理。\n\n推荐阅读：\n\nOpenAI Function Calling\nGemini API Function Calling\nClaude Tool Use\n\n产出：一个 50-150 行的最小 agent，可以选择工具、执行工具、返回最终答案。\n\nStage 2: Learn Tool Use, RAG, And Memory\n 会做检索增强生成：chunk、embed、retrieve、answer with citations。\n 会把搜索、数据库、文件、浏览器、代码执行接成工具。\n 会区分短期上下文、会话记忆、长期记忆。\n 会处理工具失败、空结果、重复调用、幻觉引用。\n 会让 agent 在回答里给出来源或证据。\n\n推荐阅读：\n\nLlamaIndex Agents\nLangChain Docs\nGemini API Code Execution\nModel Context Protocol\n\n开源项目参考：\n\nProject\tWhy It Fits Stage 2\nGPT Researcher\t最接近“资料研究助手”的成品：搜索、抓取、筛选、引用、生成长报告。\nOpen Deep Research\tLangGraph 写的 deep research 示例，适合学多轮搜索、状态管理和引用输出。\nSTORM\tStanford OVAL 的研究写作系统，适合学 outline、question asking、多视角资料综合。\nKhoj\t个人 second brain，适合学本地文档、网页、语义搜索和长期记忆。\nOnyx\t企业级 RAG/search assistant，适合学 connectors、hybrid search、权限和生产化。\nAnythingLLM\t本地 RAG + agents 产品，适合初学者快速理解完整应用形态。\nRAGFlow\t文档理解型 RAG 引擎，适合学 ingestion、chunking、retrieval、grounded answer。\nmem0\t记忆层组件，适合学如何给 agent 加长期 memory。\nLetta\t面向 stateful agents 的 memory/context 平台，适合学上下文管理。\n\n产出：一个资料研究助手，输入主题后自动搜索、筛选、总结并输出引用链接。\n\nStage 3: Study One Modern Agent Harness\n\n先选一个现代 agent 系统学深。这里的重点不是“框架 API 怎么调”，而是它如何组织工具、上下文、权限、状态、日志、子任务和反馈。\n\nSystem\tBest For\tLearn This If You Want To\nClaude Code Docs\tCoding agent product\t学真实 coding agent 的 CLI、工具、权限、hooks、subagents、MCP。\nlearn-claude-code\tFrom-scratch agent harness\t从 0 到 1 复刻 Claude Code-like harness。\nclaw0\tFrom-scratch OpenClaw gateway\t从 agent loop 一路构建 session、channel、gateway、memory、heartbeat、delivery、resilience、concurrency。\nhello-agents\tChinese agent tutorial\t从零开始构建智能体，适合系统补 Agent 原理与实践。\nOpenClaw\tLocal-first personal agent\t学本地长运行 agent、skills、消息入口、系统工具和安全边界。\nHermes Agent\tSelf-hosted growing agent\t学长期记忆、skills、toolsets、多平台消息网关和迁移能力。\nCyberClaw\tTransparent agent architecture\t学全行为审计、两段式安全调用、双水位记忆和心跳任务。\nLangGraph\tStateful graph orchestration\t学状态图、可恢复执行和可控编排。\n 读懂一个 agent harness 的目录结构。\n 找出它的 a"
+          }
+        }
+      },
+      {
+        "step": 1,
+        "event": "model",
+        "message": {
+          "role": "assistant",
+          "content": "{\"summary\": \"The GitHub page provides a curated learning roadmap for AI agents, focusing on practical applications and real-world examples.\", \"source_id\": \"L1\", \"quote\": \"A curated AI Agent learning roadmap for people who want to build useful, reliable agents instead of collecting random links.\"}"
+        }
+      }
+    ]
+  },
+  "summary": {
+    "summary": "The GitHub page provides a curated learning roadmap for AI agents, focusing on practical applications and real-world examples.",
+    "source_id": "L1",
+    "quote": "A curated AI Agent learning roadmap for people who want to build useful, reliable agents instead of collecting random links."
+  },
+  "observations": [
+    {
+      "id": "L1",
+      "url": "https://github.com/datawhalechina/Agent-Learning-Hub",
+      "title": "GitHub - datawhalechina/Agent-Learning-Hub: AI Agent 学习路线与资料库收集 · GitHub",
+      "text": "Skip to content\nNavigation Menu\nSign in\nAppearance settings\nPlatform\nAI CODE CREATION\nGitHub CopilotWrite better code with AI\nGitHub Copilot appDirect agents from issue to merge\nMCP RegistryIntegrate external tools\nDEVELOPER WORKFLOWS\nActionsAutomate any workflow\nCodespacesInstant dev environments\nIssuesPlan and track work\nCode ReviewManage code changes\nCode QualityEnforce quality at merge\nAPPLICATION SECURITY\nGitHub Advanced SecurityFind and fix vulnerabilities\nCode securitySecure your code as you build\nSecret protectionStop leaks before they start\nEXPLORE\nWhy GitHub\nDocumentation\nBlog\nChangelog\nMarketplace\nView all features\nSolutions\nBY COMPANY SIZE\nEnterprises\nSmall and medium teams\nStartups\nNonprofits\nBY USE CASE\nApp Modernization\nDevSecOps\nDevOps\nCI/CD\nView all use cases\nBY INDUSTRY\nHealthcare\nFinancial services\nManufacturing\nGovernment\nView all industries\nView all solutions\nResources\nEXPLORE BY TOPIC\nAI\nSoftware Development\nDevOps\nSecurity\nView all topics\nEXPLORE BY TYPE\nCustomer stories\nEvents & webinars\nEbooks & reports\nBusiness insights\nGitHub Skills\nSUPPORT & SERVICES\nDocumentation\nCustomer support\nCommunity forum\nTrust center\nPartners\nView all resources\nOpen Source\nCOMMUNITY\nGitHub SponsorsFund open source developers\nPROGRAMS\nSecurity Lab\nMaintainer Community\nGitHub Stars\nArchive Program\nREPOSITORIES\nTopics\nTrending\nCollections\nEnterprise\nENTERPRISE SOLUTIONS\nEnterprise platformAI-powered developer platform\nAVAILABLE ADD-ONS\nGitHub Advanced SecurityEnterprise-grade security features\nCopilot for BusinessEnterprise-grade AI features\nPremium SupportEnterprise-grade 24/7 support\nPricing\nSearch/\nSign in\nSign up\nAppearance settings\ndatawhalechina\nAgent-Learning-Hub\nRepository navigation\nCode\nIssues\nPull requests8 (8)\nActions\nProjects\nSecurity and quality\nInsights\nMore items\nAgent-Learning-Hub\nPublic\nNotificationsYou must be signed in to change notification settings\nFork887 (887)\nStar8.9k (8.9k)You must be signed in to star a repository\nAbout\n\nAI Agent 学习路线与资料库收集\n\ndatawhalechina.github.io/Agent-Learning-Hub/\nResources\nReadme\nMIT license\nContributing\nContributing\nActivity\nCustom properties\nStars\n8.9k stars\nWatchers\n16 watching\nForks\n887 forks\nReport repository\nmain\nBranchesTags\nGo to file\nCode\nOpen more actions menu\nLatest commit\n \nHistory\n25 Commits\n25 Commits\nFolders and files\nName\tName\t\nLast commit message\n\t\nLast commit date\n\n\n.gitignore\n\t\n.gitignore\n\t\n \n\t\n \n\n\nCONTRIBUTING.md\n\t\nCONTRIBUTING.md\n\t\n \n\t\n \n\n\nLICENSE\n\t\nLICENSE\n\t\n \n\t\n \n\n\nREADME.md\n\t\nREADME.md\n\t\n \n\t\n \n\n\nindex.html\n\t\nindex.html\n\t\n \n\t\n \n\n\nView all files\nRepository files navigation\nREADME\nContributing\nMIT license\nMore items\nAgent Learning Hub\n\nA curated AI Agent learning roadmap for people who want to build useful, reliable agents instead of collecting random links.\n\n这个仓库只维护一个核心展示面：README。目标是把社区里优秀分享、官方博客、论文、开源项目和真实工程经验，整理成一份可以照着执行的 AI Agent 学习 todo list。\n\nMaintainer\n\nCurated by 陈思州 (Datawhale 成员) \n\nHow To Use\n如果你是新手：按「Learning Todo List」从上到下做，每完成一项就打勾。\n如果你已经会 LLM 应用：从 Stage 2 或 Stage 3 开始，重点补 Agent loop、工具调用、评测和工程化。\n如果你想做项目：直接看「Project Ladder」，每一档做一个可运行作品。\n如果你只想找资料：看「Curated Resources」，优先读官方文档和经典论文。\nWhat To Learn Now\n\nAgent 领域变化很快。当前更值得投入的不是老式“角色扮演多 agent 框架”，而是这些更贴近真实生产力的方向：\n\nPriority\tLearn\tWhy\n1\tClaude Code / Codex-style coding agents\t真实代码库、shell、文件编辑、测试、权限、上下文压缩，是最好的 agent 工程样本。\n2\tAgent harness engineering\tagent 的能力很大一部分来自 harness：工具协议、权限、状态、反馈、回放、CI、评测。\n3\tOpenClaw / Hermes-style personal agents\t长运行、本地优先、跨应用、记忆、skills、消息入口，更像“个人操作系统”。\n4\tSkills / MCP / A2A / ACP\tskills 负责能力复用，MCP 连接工具，A2A 连接 agent，ACP 连接宿主应用。\n5\tEvaluation and safety\t没有 eval、trace、权限边界的 agent 只能算 demo。\n\n不建议把精力重押在已经泛化成模板的老式 crew/role-play 框架上。它们可以了解，但不应成为主线。\n\nLearning Todo List\nStage 0: Understand What An Agent Is\n 区分 chatbot、workflow、agent、multi-agent。\n 理解 agent 的基本循环：observe -> think -> act -> observe。\n 明白什么时候不该用 agent：任务可预测、流程稳定、普通脚本能解决时，agent 反而增加不确定性。\n 读完 Anthropic: Building effective agents。\n 读完 OpenAI: A practical guide to building agents。\n\n产出：写一页短笔记，回答「我的场景为什么需要 agent，而不是普通 workflow？」\n\nStage 1: Build A Minimal Agent Loop\n 会用一个 LLM API 完成普通对话。\n 会让模型输出结构化 JSON。\n 会定义一个工具函数，例如 search、calculator、read_file。\n 会解析模型的 tool call / function call。\n 会执行工具，并把工具结果喂回模型。\n 会给 agent loop 加最大步数、超时和错误处理。\n\n推荐阅读：\n\nOpenAI Function Calling\nGemini API Function Calling\nClaude Tool Use\n\n产出：一个 50-150 行的最小 agent，可以选择工具、执行工具、返回最终答案。\n\nStage 2: Learn Tool Use, RAG, And Memory\n 会做检索增强生成：chunk、embed、retrieve、answer with citations。\n 会把搜索、数据库、文件、浏览器、代码执行接成工具。\n 会区分短期上下文、会话记忆、长期记忆。\n 会处理工具失败、空结果、重复调用、幻觉引用。\n 会让 agent 在回答里给出来源或证据。\n\n推荐阅读：\n\nLlamaIndex Agents\nLangChain Docs\nGemini API Code Execution\nModel Context Protocol\n\n开源项目参考：\n\nProject\tWhy It Fits Stage 2\nGPT Researcher\t最接近“资料研究助手”的成品：搜索、抓取、筛选、引用、生成长报告。\nOpen Deep Research\tLangGraph 写的 deep research 示例，适合学多轮搜索、状态管理和引用输出。\nSTORM\tStanford OVAL 的研究写作系统，适合学 outline、question asking、多视角资料综合。\nKhoj\t个人 second brain，适合学本地文档、网页、语义搜索和长期记忆。\nOnyx\t企业级 RAG/search assistant，适合学 connectors、hybrid search、权限和生产化。\nAnythingLLM\t本地 RAG + agents 产品，适合初学者快速理解完整应用形态。\nRAGFlow\t文档理解型 RAG 引擎，适合学 ingestion、chunking、retrieval、grounded answer。\nmem0\t记忆层组件，适合学如何给 agent 加长期 memory。\nLetta\t面向 stateful agents 的 memory/context 平台，适合学上下文管理。\n\n产出：一个资料研究助手，输入主题后自动搜索、筛选、总结并输出引用链接。\n\nStage 3: Study One Modern Agent Harness\n\n先选一个现代 agent 系统学深。这里的重点不是“框架 API 怎么调”，而是它如何组织工具、上下文、权限、状态、日志、子任务和反馈。\n\nSystem\tBest For\tLearn This If You Want To\nClaude Code Docs\tCoding agent product\t学真实 coding agent 的 CLI、工具、权限、hooks、subagents、MCP。\nlearn-claude-code\tFrom-scratch agent harness\t从 0 到 1 复刻 Claude Code-like harness。\nclaw0\tFrom-scratch OpenClaw gateway\t从 agent loop 一路构建 session、channel、gateway、memory、heartbeat、delivery、resilience、concurrency。\nhello-agents\tChinese agent tutorial\t从零开始构建智能体，适合系统补 Agent 原理与实践。\nOpenClaw\tLocal-first personal agent\t学本地长运行 agent、skills、消息入口、系统工具和安全边界。\nHermes Agent\tSelf-hosted growing agent\t学长期记忆、skills、toolsets、多平台消息网关和迁移能力。\nCyberClaw\tTransparent agent architecture\t学全行为审计、两段式安全调用、双水位记忆和心跳任务。\nLangGraph\tStateful graph orchestration\t学状态图、可恢复执行和可控编排。\n 读懂一个 agent harness 的目录结构。\n 找出它的 a"
+    }
+  ],
+  "quote_errors": [],
+  "semantic_review": "仍需逐句人工核对摘要"
+}

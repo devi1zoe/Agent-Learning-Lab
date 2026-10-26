@@ -1,0 +1,1 @@
+The GitHub page provides a curated learning roadmap for AI agents, focusing on practical applications and real-world examples.

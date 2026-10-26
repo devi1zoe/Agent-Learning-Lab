@@ -1,0 +1,13 @@
+[
+  {
+    "event": "open",
+    "url": "https://example.com/"
+  },
+  {
+    "event": "read_page",
+    "observation_id": "L1"
+  },
+  {
+    "event": "completed"
+  }
+]

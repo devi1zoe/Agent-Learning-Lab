@@ -1,0 +1,120 @@
+{
+  "passed": true,
+  "source": "/mnt/data/projectnew/miniAgent",
+  "verification_project": "/tmp/miniagent-evidence-architecture-df8wxwb_/miniAgent",
+  "kernel_interpreter": "/tmp/miniagent-evidence-architecture-df8wxwb_/environment/bin/python",
+  "editable_install": true,
+  "mode": "default offline; source installed editable in isolated venv; no model calls",
+  "results": [
+    {
+      "notebook": "00-foundations/01-what-is-an-agent.ipynb",
+      "passed": true,
+      "seconds": 1.85
+    },
+    {
+      "notebook": "01-agent-loop/01-minimal-loop.ipynb",
+      "passed": true,
+      "seconds": 1.51
+    },
+    {
+      "notebook": "01-agent-loop/02-live-model.ipynb",
+      "passed": true,
+      "seconds": 1.44
+    },
+    {
+      "notebook": "01-agent-loop/03-extension-react.ipynb",
+      "passed": true,
+      "seconds": 1.28
+    },
+    {
+      "notebook": "02-tools-rag-memory/01-rag-and-memory.ipynb",
+      "passed": true,
+      "seconds": 1.45
+    },
+    {
+      "notebook": "02-tools-rag-memory/02-research-agent.ipynb",
+      "passed": true,
+      "seconds": 2.11
+    },
+    {
+      "notebook": "02-tools-rag-memory/03-web-research.ipynb",
+      "passed": true,
+      "seconds": 1.47
+    },
+    {
+      "notebook": "02-tools-rag-memory/04-extension-self-ask.ipynb",
+      "passed": true,
+      "seconds": 1.37
+    },
+    {
+      "notebook": "03-agent-harness/01-harness.ipynb",
+      "passed": true,
+      "seconds": 1.48
+    },
+    {
+      "notebook": "03-agent-harness/02-upstream-comparison.ipynb",
+      "passed": true,
+      "seconds": 1.42
+    },
+    {
+      "notebook": "03-agent-harness/03-extension-planning-reflection.ipynb",
+      "passed": true,
+      "seconds": 1.42
+    },
+    {
+      "notebook": "03-agent-harness/04-extension-tot-compiler.ipynb",
+      "passed": true,
+      "seconds": 1.66
+    },
+    {
+      "notebook": "04-multi-agent/01-coordination.ipynb",
+      "passed": true,
+      "seconds": 1.42
+    },
+    {
+      "notebook": "04-multi-agent/02-live-coordination.ipynb",
+      "passed": true,
+      "seconds": 1.43
+    },
+    {
+      "notebook": "05-skills-protocols/01-skills-and-protocols.ipynb",
+      "passed": true,
+      "seconds": 1.47
+    },
+    {
+      "notebook": "05-skills-protocols/02-skill-comparison.ipynb",
+      "passed": true,
+      "seconds": 1.42
+    },
+    {
+      "notebook": "06-browser-agent/01-browser-basics.ipynb",
+      "passed": true,
+      "seconds": 8.16
+    },
+    {
+      "notebook": "06-browser-agent/02-public-page-agent.ipynb",
+      "passed": true,
+      "seconds": 1.45
+    },
+    {
+      "notebook": "07-evaluation-safety/01-contract-evaluation.ipynb",
+      "passed": true,
+      "seconds": 1.39
+    },
+    {
+      "notebook": "07-evaluation-safety/02-live-evaluation.ipynb",
+      "passed": true,
+      "seconds": 1.37
+    },
+    {
+      "notebook": "08-capstone/01-research-assistant.ipynb",
+      "passed": true,
+      "seconds": 1.42
+    },
+    {
+      "notebook": "08-capstone/02-delivery-check.ipynb",
+      "passed": true,
+      "seconds": 2.66
+    }
+  ]
+}

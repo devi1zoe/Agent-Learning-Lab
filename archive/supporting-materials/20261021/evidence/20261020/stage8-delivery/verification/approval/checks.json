@@ -1,0 +1,72 @@
+[
+  {
+    "case": "deny",
+    "passed": true,
+    "first": {
+      "status": "denied",
+      "path": "/mnt/data/projectnew/miniagent/miniAgent/evidence/20261020/stage8-delivery/verification/approval/deny.md",
+      "sha256": "dc06f92c67bc97dde343413585518d37beb7eca1fb890ebce58c6713e423f9e6"
+    },
+    "second": null,
+    "input_source": "scripted test response, not actual human approval"
+  },
+  {
+    "case": "wrong_parameters",
+    "passed": true,
+    "first": {
+      "status": "denied",
+      "path": "/mnt/data/projectnew/miniagent/miniAgent/evidence/20261020/stage8-delivery/verification/approval/wrong_parameters.md",
+      "sha256": "dc06f92c67bc97dde343413585518d37beb7eca1fb890ebce58c6713e423f9e6"
+    },
+    "second": null,
+    "input_source": "scripted test response, not actual human approval"
+  },
+  {
+    "case": "changed_content",
+    "passed": true,
+    "first": {
+      "status": "denied",
+      "path": "/mnt/data/projectnew/miniagent/miniAgent/evidence/20261020/stage8-delivery/verification/approval/changed_content.md",
+      "sha256": "dc06f92c67bc97dde343413585518d37beb7eca1fb890ebce58c6713e423f9e6"
+    },
+    "second": null,
+    "input_source": "scripted test response, not actual human approval"
+  },
+  {
+    "case": "approve",
+    "passed": true,
+    "first": {
+      "status": "exported",
+      "path": "/mnt/data/projectnew/miniagent/miniAgent/evidence/20261020/stage8-delivery/verification/approval/approve.md",
+      "sha256": "dc06f92c67bc97dde343413585518d37beb7eca1fb890ebce58c6713e423f9e6"
+    },
+    "second": null,
+    "input_source": "scripted test response, not actual human approval"
+  },
+  {
+    "case": "existing",
+    "passed": true,
+    "first": {
+      "status": "denied",
+      "path": "/mnt/data/projectnew/miniagent/miniAgent/evidence/20261020/stage8-delivery/verification/approval/existing.md",
+      "sha256": "dc06f92c67bc97dde343413585518d37beb7eca1fb890ebce58c6713e423f9e6"
+    },
+    "second": null,
+    "input_source": "scripted test response, not actual human approval"
+  },
+  {
+    "case": "repeat",
+    "passed": true,
+    "first": {
+      "status": "exported",
+      "path": "/mnt/data/projectnew/miniagent/miniAgent/evidence/20261020/stage8-delivery/verification/approval/repeat.md",
+      "sha256": "dc06f92c67bc97dde343413585518d37beb7eca1fb890ebce58c6713e423f9e6"
+    },
+    "second": {
+      "status": "denied",
+      "path": "/mnt/data/projectnew/miniagent/miniAgent/evidence/20261020/stage8-delivery/verification/approval/repeat.md",
+      "sha256": "dc06f92c67bc97dde343413585518d37beb7eca1fb890ebce58c6713e423f9e6"
+    },
+    "input_source": "scripted test response, not actual human approval"
+  }
+]

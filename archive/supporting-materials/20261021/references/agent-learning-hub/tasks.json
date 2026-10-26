@@ -1,0 +1,300 @@
+{
+  "source": {
+    "repository": "https://github.com/datawhalechina/Agent-Learning-Hub",
+    "commit": "dddf777dde6788228136862f270203424a28efbc",
+    "upstream_committed_at": "2026-07-19T12:59:49Z",
+    "retrieved_at": "2026-10-20T06:23:38.450612+00:00"
+  },
+  "stages": [
+    {
+      "stage": 0,
+      "title": "Understand What An Agent Is",
+      "tasks": [
+        {
+          "id": "S0.1",
+          "requirement": "区分 chatbot、workflow、agent、multi-agent。"
+        },
+        {
+          "id": "S0.2",
+          "requirement": "理解 agent 的基本循环：observe -> think -> act -> observe。"
+        },
+        {
+          "id": "S0.3",
+          "requirement": "明白什么时候不该用 agent：任务可预测、流程稳定、普通脚本能解决时，agent 反而增加不确定性。"
+        },
+        {
+          "id": "S0.4",
+          "requirement": "读完 [Anthropic: Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)。"
+        },
+        {
+          "id": "S0.5",
+          "requirement": "读完 [OpenAI: A practical guide to building agents](https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/)。"
+        }
+      ],
+      "outcome": {
+        "id": "S0.O",
+        "requirement": "写一页短笔记，回答「我的场景为什么需要 agent，而不是普通 workflow？」"
+      }
+    },
+    {
+      "stage": 1,
+      "title": "Build A Minimal Agent Loop",
+      "tasks": [
+        {
+          "id": "S1.1",
+          "requirement": "会用一个 LLM API 完成普通对话。"
+        },
+        {
+          "id": "S1.2",
+          "requirement": "会让模型输出结构化 JSON。"
+        },
+        {
+          "id": "S1.3",
+          "requirement": "会定义一个工具函数，例如 search、calculator、read_file。"
+        },
+        {
+          "id": "S1.4",
+          "requirement": "会解析模型的 tool call / function call。"
+        },
+        {
+          "id": "S1.5",
+          "requirement": "会执行工具，并把工具结果喂回模型。"
+        },
+        {
+          "id": "S1.6",
+          "requirement": "会给 agent loop 加最大步数、超时和错误处理。"
+        }
+      ],
+      "outcome": {
+        "id": "S1.O",
+        "requirement": "一个 50-150 行的最小 agent，可以选择工具、执行工具、返回最终答案。"
+      }
+    },
+    {
+      "stage": 2,
+      "title": "Learn Tool Use, RAG, And Memory",
+      "tasks": [
+        {
+          "id": "S2.1",
+          "requirement": "会做检索增强生成：chunk、embed、retrieve、answer with citations。"
+        },
+        {
+          "id": "S2.2",
+          "requirement": "会把搜索、数据库、文件、浏览器、代码执行接成工具。"
+        },
+        {
+          "id": "S2.3",
+          "requirement": "会区分短期上下文、会话记忆、长期记忆。"
+        },
+        {
+          "id": "S2.4",
+          "requirement": "会处理工具失败、空结果、重复调用、幻觉引用。"
+        },
+        {
+          "id": "S2.5",
+          "requirement": "会让 agent 在回答里给出来源或证据。"
+        }
+      ],
+      "outcome": {
+        "id": "S2.O",
+        "requirement": "一个资料研究助手，输入主题后自动搜索、筛选、总结并输出引用链接。"
+      }
+    },
+    {
+      "stage": 3,
+      "title": "Study One Modern Agent Harness",
+      "tasks": [
+        {
+          "id": "S3.1",
+          "requirement": "读懂一个 agent harness 的目录结构。"
+        },
+        {
+          "id": "S3.2",
+          "requirement": "找出它的 agent loop、tool registry、permission gate、session store、context compaction。"
+        },
+        {
+          "id": "S3.3",
+          "requirement": "跑通它的最小示例，并加一个你自己的工具。"
+        },
+        {
+          "id": "S3.4",
+          "requirement": "观察一次完整 trace，解释每一步为什么发生。"
+        },
+        {
+          "id": "S3.5",
+          "requirement": "把同一个任务分别用「裸 agent loop」和「harness」实现，对比差异。"
+        }
+      ],
+      "outcome": {
+        "id": "S3.O",
+        "requirement": "一个可调试的 agent harness demo，包含 README、运行步骤、示例输入输出和失败记录。"
+      }
+    },
+    {
+      "stage": 4,
+      "title": "Multi-Agent Is Coordination, Not Magic",
+      "tasks": [
+        {
+          "id": "S4.1",
+          "requirement": "理解 planner / executor / reviewer / critic / router 等常见角色。"
+        },
+        {
+          "id": "S4.2",
+          "requirement": "学会用 supervisor 或 graph 管理多 agent，而不是让 agent 随便聊天。"
+        },
+        {
+          "id": "S4.3",
+          "requirement": "会定义每个 agent 的职责边界、输入输出 schema、停止条件。"
+        },
+        {
+          "id": "S4.4",
+          "requirement": "会处理循环、争论、任务漂移、上下文膨胀。"
+        },
+        {
+          "id": "S4.5",
+          "requirement": "会判断什么时候单 agent 更好。"
+        }
+      ],
+      "outcome": {
+        "id": "S4.O",
+        "requirement": "一个小型多 agent 系统，例如 research -> write -> review -> revise。"
+      }
+    },
+    {
+      "stage": 5,
+      "title": "Learn Skills, Protocols, And Capability Packaging",
+      "tasks": [
+        {
+          "id": "S5.1",
+          "requirement": "理解 Skill 和 Tool 的区别：tool 是可调用接口，skill 是可复用流程知识。"
+        },
+        {
+          "id": "S5.2",
+          "requirement": "理解 Skill 和 Prompt 的区别：prompt 通常是一次性指令，skill 是可发现、可版本化、可分发的能力包。"
+        },
+        {
+          "id": "S5.3",
+          "requirement": "理解 Skill 和 MCP 的区别：MCP 接入外部工具/数据源，skill 告诉 agent 如何完成一类任务。"
+        },
+        {
+          "id": "S5.4",
+          "requirement": "阅读 Claude Code Skills 的文件结构和触发机制。"
+        },
+        {
+          "id": "S5.5",
+          "requirement": "阅读 OpenClaw Skills 的加载、作用域和安全边界。"
+        },
+        {
+          "id": "S5.6",
+          "requirement": "写一个最小 `SKILL.md`，包含 name、description、何时使用、步骤、验收标准。"
+        },
+        {
+          "id": "S5.7",
+          "requirement": "给 skill 加一个脚本或模板文件，并说明 agent 什么时候才需要加载它。"
+        },
+        {
+          "id": "S5.8",
+          "requirement": "给 skill 写一个 smoke test，验证它是否真的提升任务成功率。"
+        }
+      ],
+      "outcome": {
+        "id": "S5.O",
+        "requirement": "一个可复用 skill，例如 code-review、research-report、migration-helper、pdf-extraction 或 release-note-writer。"
+      }
+    },
+    {
+      "stage": 6,
+      "title": "Browser And Computer-Use Agents",
+      "tasks": [
+        {
+          "id": "S6.1",
+          "requirement": "理解 browser agent 和普通 API tool 的区别。"
+        },
+        {
+          "id": "S6.2",
+          "requirement": "会用 Playwright 或 browser-use 做网页观察和点击。"
+        },
+        {
+          "id": "S6.3",
+          "requirement": "会给浏览器操作加安全限制：不登录敏感账号、不越权、不绕过平台规则。"
+        },
+        {
+          "id": "S6.4",
+          "requirement": "会处理页面变化、弹窗、加载失败、元素定位失败。"
+        },
+        {
+          "id": "S6.5",
+          "requirement": "会记录截图、DOM、动作日志，方便复盘。"
+        }
+      ],
+      "outcome": {
+        "id": "S6.O",
+        "requirement": "一个只操作公开网页的 browser agent，例如打开网页、提取信息、生成摘要。"
+      }
+    },
+    {
+      "stage": 7,
+      "title": "Evaluation, Observability, And Safety",
+      "tasks": [
+        {
+          "id": "S7.1",
+          "requirement": "为 agent 准备固定测试集，而不是只看 demo。"
+        },
+        {
+          "id": "S7.2",
+          "requirement": "记录成功率、失败原因、工具调用次数、成本、延迟。"
+        },
+        {
+          "id": "S7.3",
+          "requirement": "会看 trace，知道失败发生在 prompt、工具、检索、模型还是状态管理。"
+        },
+        {
+          "id": "S7.4",
+          "requirement": "给危险工具加人工确认，例如发邮件、删文件、付款、发布内容。"
+        },
+        {
+          "id": "S7.5",
+          "requirement": "了解 prompt injection、data exfiltration、tool abuse 等风险。"
+        },
+        {
+          "id": "S7.6",
+          "requirement": "会用回归测试防止 prompt 或工具改动后能力退化。"
+        }
+      ],
+      "outcome": {
+        "id": "S7.O",
+        "requirement": "一个 agent eval 表格，至少包含 20 个任务、期望结果、实际结果、失败分类。"
+      }
+    },
+    {
+      "stage": 8,
+      "title": "Ship A Real Agent",
+      "tasks": [
+        {
+          "id": "S8.1",
+          "requirement": "有明确用户、明确任务、明确成功标准。"
+        },
+        {
+          "id": "S8.2",
+          "requirement": "有日志、trace、错误重试、超时、成本上限。"
+        },
+        {
+          "id": "S8.3",
+          "requirement": "有权限边界和人工确认机制。"
+        },
+        {
+          "id": "S8.4",
+          "requirement": "有部署方式：CLI、Web app、Slack bot、GitHub Action 或后台任务。"
+        },
+        {
+          "id": "S8.5",
+          "requirement": "有 README：怎么运行、怎么配置 key、怎么扩展工具、有哪些限制。"
+        }
+      ],
+      "outcome": {
+        "id": "S8.O",
+        "requirement": "一个别人能 clone 下来跑的 agent 项目。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "original": "LINUX-START.md",
+    "archived": "archive/learning-support/20261021/LINUX-START.md",
+    "sha256": "085833924f3e5153dd68ed2c750762699d8f3fcd9e9d7f0980833e13bdfe1275"
+  },
+  {
+    "original": "MACOS-START.md",
+    "archived": "archive/learning-support/20261021/MACOS-START.md",
+    "sha256": "b05ad7adcb7526e1040af0cf33a6dd2272422460be8b6349f7cd8dfe9c417f2b"
+  },
+  {
+    "original": "scripts/start-jupyter-linux.sh",
+    "archived": "archive/learning-support/20261021/scripts/start-jupyter-linux.sh",
+    "sha256": "0e0e2eb885116ed7cbec11d0588715e0387e1a074965f7424a9d1ce084517ce6"
+  },
+  {
+    "original": "scripts/lesson_loader.py",
+    "archived": "archive/learning-support/20261021/scripts/lesson_loader.py",
+    "sha256": "7cb29573b9af7e6a9da0b1d0fe70f41d788ea6eb3e653a436f9e283d8180743e"
+  }
+]
